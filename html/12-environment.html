@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Programming Environment</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Programming Environment </h2>
+
+                    <p> A quick review of our Python programming environment
+                </section>
+                <section>
+                    <section>
+                        <h2> The command shell </h2>
+                        <p> This can be graphical, or text.
+
+                        <p> Text command shells are <code>cmd.exe</code> or
+                        PowerShell on Windows, or Terminal on Mac.
+
+                        <p> Graphical command shells are how you are used to
+                        working with the OS (point, click, drag,
+                        double-click).
+
+                        <p> The shell lets you run programs.
+                    </section>
+                    <section>
+                        <h2> Text Command Shell </h2>
+
+                        <p> Primary uses:
+                        <br><ul>
+                            <li> Run programs
+                            <li> Handle stdin and stdout
+                        </ul>
+
+                        <p> Keeps track of which directory it's in
+                    </section>
+                    <section>
+                        <p> Useful to:
+                        <br><ul>
+                            <li> Run the Python interpreter
+                            <li> Run Git commands
+                            <li> Start an editor (some OSes and editors)
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Running Python </h2>
+                        <p><code><pre>WASE-AM06002295:beginning_python_jan2020$ python3 hello_world.py
+hello world!</pre></code>
+                        <p> This shows the prompt, then a dollar sign.  The
+                        program to be run is <code>python3</code>.  The
+                        argument to the program is
+                        <code>hello_world.py</code>, which Python interprets
+                        as a filename to be run.
+
+                        <p> Your command prompt will look different, depending
+                        on your OS.
+                    </section>
+                    <section>
+                        <h2> Running Git </h2>
+                        <p><code><pre>WASE-AM06002295:beginning_python_jan2020$ git status
+On branch master
+Your branch is up to date with 'github/master'.</pre></code>
+                        <p> This shows the prompt, then the command
+                        <code>git</code>.  Following the command is the word
+                        <code>status</code>, which is interpreted by Git as a
+                        command to run.
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2> Programs </h2>
+
+                        <p> We run programs on top of the OS, much like a car
+                        runs on a road.  Programs we'll run in this class:
+                        <br><ul>
+                            <li> Python interpreter
+                            <li> Git commands
+                            <li> Code editor
+                            <li> Web browser
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Python Interpreter </h2>
+                        <p> A Python interactive session runs on top of the
+                        OS, launched from the command shell:
+
+                        <p><code><pre>>>> print('hello, world!')
+hello, world!</pre></code>
+                        <p> Note that the prompt is different, compared to the
+                        command shell
+                    </section>
+                    <section>
+                        <h2> Editor </h2>
+                        <p> Your code editor runs on top of the OS.
+                        IDEs like VSCode blur the line, because they can
+                        run a command prompt inside themselves.
+                    </section>
+                    <section>
+                        <h2> Web Browser </h2>
+                        <p> Your web browser also runs on top of the OS.
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2> Git </h2>
+                        <p> Ensuring your Git setup is working like it should
+                    </section>
+                    <section>
+                        <h2> github.com </h2>
+                        <p> Log into <code>github.com</code>.
+
+                        <p> If you don't already have an account there, create
+                        one now.  Tell Ian what your username is, if you
+                        haven't already.
+
+                        <p> Note, this is NOT a Disney service, this is the
+                        public Github site.
+                    </section>
+                    <section>
+                        <h2> Checking Git status </h2>
+                        <p> Use the <code>cd</code> command to change to the
+                        directory where you cloned the Git repo:
+
+                        <p><code><pre>cd devel/python_class/beginning_python_jan2020</code></pre>
+                    </section>
+                    <section>
+                        <p> Run the following command on your computer, inside
+                        a command window (cmd.exe, or Terminal on Mac):
+
+                        <p><code>git status</code>
+                    </section>
+                    <section>
+                        <h2> Pull </h2>
+                        <p> Run the following command on your computer:
+
+                        <p><code>git pull</code>
+                    </section>
+                    <section>
+                        <h2> Push </h2>
+                        <p> Run the following command on your computer:
+
+                        <p><code>git push</code>
+                    </section>
+                    <section>
+                        <h2> Fixing problems </h2>
+                        <p> What problems did you have?  Let's fix them.
+                    </section>
+                </section>
+                <section>
+                    <h2> What's Next </h2>
+                    <p><a href="13-slices.html">Slices</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

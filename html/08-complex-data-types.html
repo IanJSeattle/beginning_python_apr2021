@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Complex Data Types</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Complex Data Types </h2>
+                    <p>This is just a brief introduction.  More to come
+                    later.
+                </section>
+                <section>
+                    <h2> Lists </h2>
+                    <ul>
+                        <li> Constructors: <code>[]</code> or
+                        <code>list()</code>
+                        <li> Contains a list of any type of object
+                        <li> Mutable
+                        <li> Random-access
+                        <li> Indexed by number
+                        <li> 0 (zero) is first element
+                    </ul>
+                    <p><code><pre>>>> my_list = ['one', 2, 'trois']
+>>> my_list[1]
+2</pre></code>
+                </section>
+                <section>
+                    <h2> Tuples </h2>
+                    <ul>
+                        <li> Constructors: <code>()</code> or
+                        <code>tuple()</code>
+                        <li> Contains a list of any type of object
+                        <li> Immutable
+                        <li> Random-access
+                        <li> Indexed by number
+                        <li> 0 (zero) is first element
+                    </ul>
+                    <p><code><pre>>>> my_tuple = ('one', 2, 'trois')
+>>> my_tuple[1]
+2</pre></code>
+                </section>
+                <section>
+                    <h2> Dicts </h2>
+                    <ul>
+                        <li> Constructors: <code>{}</code>* or
+                        <code>dict()</code>
+                        <li> Contains a collection of any type of
+                        object
+                        <li> Mutable
+                        <li> Random-access
+                        <li> Indexed by immutable keys
+                        <li> Fast
+                    </ul>
+                    <p><code><pre>>>> my_dict = {'value': 2, 'suit': 'hearts'}
+>>> my_dict['value']
+2</pre></code>
+                    <p> * Note that <code>{}</code> can also be used to
+                    construct a set.
+                </section>
+                <section>
+                    <h2> Mutability in Python</h2>
+                    <p> <b>mutability</b> adj. Capable of or subject to
+                    change or alteration.
+                    <p> An object that's <b>mutable</b> can be changed or
+                    updated.  An object that's <b>immutable</b> cannot
+                    be changed.
+                    <p> Strings, integers, and tuples are
+                    <b>immutable</b>.  Lists, dicts, and objects are
+                    <b>mutable</b>.
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p><a href="09-lists.html">Lists</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

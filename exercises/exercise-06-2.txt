@@ -1,0 +1,15 @@
+Exercise 6-2
+
+Start up the interactive Python interpreter.
+
+Create a new variable called "suit", and assign the value "hearts" to it.
+
+Create a new variable called "value", and assign the value 2 to it
+(don't put quotes around 2 in the assignment).
+
+Type the following commands into the interpreter:
+
+type(suit)
+type(value)
+
+What happens?  Are the results different?

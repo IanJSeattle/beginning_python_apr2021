@@ -1,0 +1,47 @@
+Welcome to the January 2020 Beginning Python class!
+
+We will use this Git repo for many things in class.  Particularly, all
+the HTML slide decks used in class are stored here, for your review.
+You can find the exercise text here, and once an exercise is complete,
+the answer key code.  You will add your code here.
+
+DIRECTORIES IN THIS REPO
+
+html: This contains the slides we use in class.  Open any of the
+.html files with your browser to see that deck's slides.  Navigate
+using the arrow keys.  Most movements are to the right, but some decks
+have a downward track as well (look for the arrows in the
+lower-right corner as a hint).  Press the escape key to see a map of
+slides.
+
+exercises: Here we will put the instructions for class exercises, as
+well as our demo code, once the exercise is complete.
+
+students: Find your name in this directory, and keep all your class
+code here.  This allows the instructors to review your code very
+easily, and allows you to see what other students are doing.
+
+DOWNLOADING THIS REPO
+
+To clone this repo, click the "Clone" button in the upper right hand
+corner of the Gitlab window, and copy the text there, which starts with
+"git clone".  If you don't already have an SSH key set up with Gitlab,
+use the HTTPS clone command, and we'll help you set up a key during
+class.  Paste this into a terminal window, and when you run it, it will
+copy all the files down to your computer.  Make sure you use the "cd"
+command to change the current working directory to the place you want
+to have your code -- I keep my programming files in a directory called
+"devel", but you can do anything you like.  Just make sure you can find
+it again.
+
+CLASS TIMES
+
+We meet every Thursday at 2 PM Pacific time (5 pm Eastern time), at
+
+https://disney.zoom.us/j/95842500730?pwd=OGRSbmtWaElKdTlDOWZFZzhTbkFkZz09
+
+In addition, we have office hours every Thursday at 11 am Pacific time,
+which is a free-form time to bring problems or questions to discuss in
+an informal environment.
+
+Adding a line to demonstrate git.

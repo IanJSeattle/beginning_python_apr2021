@@ -1,0 +1,125 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Slices</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Slices </h2>
+
+                    <p> A slice is a section, or slice, of an iterable object.
+                    So it works on lists, but also on strings.
+
+                    <p> The syntax for a slice is this:
+
+                    <p><code><pre>>>> my_list = ['a', 'b', 'c', 'd']
+>>> my_list[1:3]
+['b', 'c']</pre></code>
+                </section>
+                <section>
+                    <p>The slice returns a <b>new list</b>, and does not modify
+                    the existing list.
+
+                    <p>The first number is where to <b>start</b> the slice.
+                    Empty (<code>[:2]</code>) means "the beginning".
+
+                    <p>The second number is where to <b>end</b> the slice.
+                    Empty (<code>[2:]</code>) means "the end".
+
+                    <p>Slice numbers point to <b>borders</b> between elements,
+                    not the elements themselves.
+                </section>
+                <section>
+                    <p> Border illustration:
+                    <p><img src="Python-String-Slicing-Illustration.png">
+                </section>
+                <section>
+                    <h2> Step size in slices </h2>
+                    <p> A third position exists, showing the step size:
+
+                    <p><code><pre>>>> my_list = ['a', 'b', 'c', 'd']
+>>> my_list[::2]
+['a', 'c']
+>>> my_list[::-1]
+['d', 'c', 'b', 'a']</pre></code>
+                </section>
+                <section>
+                    <h2> Exercise 13-1 </h2>
+
+                    <ul>
+                    <li> In a new file, make a variable containing the string "Hello world".
+                    <li> Use slice notation to print out the word "Hello".  Do
+                    the same for "world".
+
+                    <li> Use the step function with a -1 to print "Hello world"
+                    backwards.
+
+                    <li> Make a new list containing the letters A through I.
+                    Use slice notation to make a list that contains C through
+                    G inclusive.
+                    </ul>
+                    <p>Slice syntax: <code>iterable[start:stop:step]</code>
+                </section>
+                <section>
+                    <h2> Copying a list </h2>
+                    <p> Because slices return a new list, they can be used to
+                    copy the whole list:
+
+                    <p><code><pre>>>> my_list = ['a', 'b', 'c', 'd']
+>>> new_list = my_list[:]
+>>> new_list[0] = 'e'
+>>> new_list
+['e', 'b', 'c', 'd']
+>>> my_list
+['a', 'b', 'c', 'd']</code></pre>
+                </section>
+                <section>
+                    <h2> Exercise 13-2 </h2>
+                    <ul>
+                    <li> Make a list variable that contains the letters A
+                    through G.
+                    <li> Assign that list to a new variable using the equals
+                    sign.
+                    <li> Modify element 3 of that new list to be the letter Z
+                    <li> Print out the original list
+                    <li> Repeat these steps, but make the new list equal to
+                    the old list with <code>[:]</code> after it
+                    <p> What happens?
+                </section>
+                <section>
+                    <h2> What's Next </h2>
+                    <p><a href="14-tuples.html">Tuples</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

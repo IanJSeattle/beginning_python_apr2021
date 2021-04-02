@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: If Statements </title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> If Statements </h2>
+
+                    <p> The <code>if</code> statement is used to make
+                    decisions in code.  It does this using a
+                    <code>boolean</code> data type.
+                </section>
+                <section>
+                    <section>
+                        <h2> Booleans </h2>
+
+                        <p> The boolean data type is one which has only two
+                        values: true and false.  In Python, these are known as
+                        <code>True</code> and <code>False</code> (note
+                        capitalization).  The data type is called
+                        <code>bool</code>.
+
+                        <p> Any value in Python can be cast (that is,
+                        transformed) into a <code>bool</code>.
+                    </section>
+                    <section>
+                        <h2> Truthiness </h2>
+
+                        <p> Something which is "truthy" evaluates to
+                        <code>True</code> when cast to <code>bool</code>:
+
+                        <p><ul>
+                        <li> 'hello' (non-empty string)
+                        <li> 1 (non-zero integer or float)
+                        <li> [1] (non-empty list)
+                        <li> (1) (non-empty tuple)
+                        <li> {'one': 1} (non-empty dict)
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Falsiness </h2>
+
+                        <p> Likewise, something which is "falsy" evaluates to
+                        <code>False</code>:
+
+                        <p><ul>
+                        <li> '' (empty string)
+                        <li> 0 (zero-value int or float)
+                        <li> [] (empty list)
+                        <li> () (empty tuple)
+                        <li> {} (empty dict)
+                    </section>
+                    <section>
+                        <h2> Booleans in Action </h2>
+
+                        <p> Start up your interactive Python session, and try
+                        running the following:
+
+                        <p><ul>
+                        <code>
+                        <li> bool(1)
+                        <li> bool(0)
+                        <li> bool([1, 2, 3])
+                        <li> bool('hi there')
+                        <li> bool('')
+                        </ul>
+                        </code>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2> Checking Equality </h2>
+
+                        <p> The <code>==</code> (double-equals) operator
+                        returns a boolean value.  The <code>=</code> (equals)
+                        operator assigns values, but doesn't return anything.
+
+                        <p> Use <code>==</code> to check if two things are
+                        equal*.
+
+                        <p> * There are a <b>lot</b> of caveats to this when
+                        discussing complex data types.
+                    </section>
+                    <section>
+                        <p> Use <code>==</code> to compare <b>simple</b>
+                        values, such as numbers or strings, or single elements
+                        of more-complex data types.
+
+                        <p> Do not use it to compare whole lists or
+                        dictionaries until you have a better understanding of
+                        how those types work.
+                    </section>
+                </section>
+                <section>
+                    <h2> Structure of an If </h2>
+
+                    <p><code><pre>if boolean:
+    # perform actions in the true block
+elif boolean:
+    # perform actions in the else-if block
+else:
+    # perform actions in the else block</code></pre>
+                </section>
+                <section>
+                    <h2> Exercise 15-1 </h2>
+
+                    <p> Copy Exercise 14-2 into a new file.
+
+                    <p> Add the following line at the end of the for loop, so
+                    it runs each time through:
+
+                    <p><code>
+<pre>answer = input('Press enter to hit, or "s" to stay ')</pre></code>
+
+                    <p> Then add an <code>if</code> statement which checks
+                    <code>answer</code> and executes the <code>break</code>
+                    keyword if <code>answer</code> is equal to 's'.
+                </section>
+                <section>
+                    <h2> Exercise 15-2 </h2>
+
+                    <p> Let's implement FizzBuzz.
+
+                    <p> Write a for loop using <code>range()</code> to count
+                    up to 30.  Print each number, except if the number is
+                    divisible by 3, print "Fizz"; if the number is divisible
+                    by 5, print "Buzz"; and if the number is divisible by both
+                    3 and 5, print "Fizz Buzz", instead of the number.
+
+                    <p> This is a popular coding interview question.
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

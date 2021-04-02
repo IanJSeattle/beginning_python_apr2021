@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Editors</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Python-friendly Editors </h2>
+                    <p> Choose a text editor, not a word processor.
+                    <p> Nice features to have:
+                    <ul>
+                        <li> Syntax highlighting
+                        <li> Auto-indent
+                        <li> Quote/paren/bracket matching
+                        <li> Code-aware navigation
+                        <li> Debugger/linter/interpreter integration
+                    </ul>
+                </section>
+                <section>
+                    <section>
+                        <h2> Some Options </h2>
+                        <p> Plain text editors:
+                        <ul>
+                            <li> Notepad++ (Win)
+                            <li> Sublime Text
+                            <li> EMACS
+                            <li> vim
+                        </ul>
+                    </section>
+                    <section>
+                        <p> Dedicated IDEs:
+                        <ul>
+                            <li> Visual Studio Code
+                            <li> Thonny
+                            <li> Atom
+                            <li> PyCharm
+                            <li> Eclipse
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> What we recommend </h2>
+                        <ul>
+                            <li> Sublime Text
+                            <li> Visual Studio Code
+                        </ul>
+                        <p> <a
+                        href="https://realpython.com/python-ides-code-editors-guide/">This
+                        guide from RealPython</a> is also good.
+                    </section>
+                    <section>
+                        <h2> What we use </h2>
+                        <p> Ian: vim
+                        <p> Maria: EMACS
+                        <p> These are not good beginner choices, unless you
+                        already use them.
+                    </section>
+                </section>
+                <section>
+                    <h2> Today's Homework </h2>
+                    <p> Read up on Python editors, and try installing one or
+                    more.  Write a Hello World program in your editor.  Run it
+                    and ensure everything is working.  Ask questions on
+                    <u>#beginning_python</u> or by Slack direct message.
+
+                    <p> <code><pre>print('Hello world!')</pre></code>
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p> <a href="04-git.html">Git</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

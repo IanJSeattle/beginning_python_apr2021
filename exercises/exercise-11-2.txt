@@ -1,0 +1,25 @@
+Exercise 11-2
+
+Open a new file.
+
+Create a list of 4-5 people's names.
+
+Create a new list of strings, which uses an F-string inside a list
+comprehension.  This list should contain a series of strings which look
+something like this:
+
+['1 yuki', '2 bob', '3 sanjay']
+
+...though with your names listed.  This list should start with the
+number 1, not zero.
+
+Finally, use a for loop to print each string from your new, ranked list
+of names.
+
+** Hints:
+
+An F-string has the format: f'text {expression}'
+
+A list comprehension has the format: [item for item in iterable]
+
+The enumerate function has the format: enumerate(iterable)

@@ -1,0 +1,12 @@
+Exercise 15-1
+
+Make a copy of the file where you completed Exercise 14-2.
+
+At the end of the for loop in your new file, add the following line, so it
+runs as part of the loop:
+
+answer = input('Press enter to hit, or "s" to stay ')
+
+Still inside the for loop, add an if statement which checks to see if the
+answer variable is set to "s".  If it is set to "s", run the break keyword to
+break out of the loop in the if statement's code block.

@@ -1,0 +1,22 @@
+Exercise 7-2
+
+Start up the interactive Python interpreter.
+
+Create a new variable called "my_string", and assign the value "hello
+there" to it.
+
+Run the following methods on my_string:
+
+my_string.lower()
+my_string.upper()
+my_string.capitalize()
+my_string.title()
+
+Using the + operator, try joining my_string with ", bob".
+
+Using the my_int variable from the previous exercise (create it again
+if you stopped the interpreter between the two exercises), try joining
+my_string and my_int together with the + operator.
+
+Using my_float (again, recreate it if necessary), try joining my_string
+and my_float with the + operator.

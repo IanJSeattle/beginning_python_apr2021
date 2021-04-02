@@ -1,0 +1,13 @@
+Exercise 6-1
+
+Start up the interactive Python interpreter on your computer, or load
+the site https://repl.it/languages/python3.
+
+In the interpreter, create a variable called "card", and assign it the
+value of "2 of hearts".
+
+Once this has been created, type the bare word "card" into the
+interpreter, and press enter.  What happens?
+
+Now type in "print(card)".  What happens?  Is it different?  How is it
+different?

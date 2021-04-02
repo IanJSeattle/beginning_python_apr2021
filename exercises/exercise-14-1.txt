@@ -1,0 +1,15 @@
+Exercise 14-1
+
+This example, we'll work on items from a grocery shopping receipt.  Don't
+worry about making the prices realistic if you don't want to.
+
+Create a variable that holds a list, which contains at least four tuples.
+Each tuple should describe a grocery item, and a price, like this:
+
+("beans", 1.35)
+
+Using a for loop, print out the names of each item on the receipt.  After
+the loop, print out the total amount of money spent on the groceries from
+the list.
+
+To make a list of tuples, you can use this syntax: [(1, 2), (3, 4)]

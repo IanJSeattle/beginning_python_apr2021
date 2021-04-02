@@ -1,0 +1,15 @@
+Exercise 13-1
+
+In a new file, assign the value "Hello world" to a new variable.
+
+Using slice notation on the new variable, print out the word "Hello".  Use
+the same notation to print the word "world".
+
+Using the third step field of a slice, print out "dlrow olleH" by using a
+-1 there.
+
+Make a new list containing the letters A through I.  Use slice notation to
+create a new list that contains the letters C through G, using the first
+list as the source.
+
+Slice syntax: iterable[start:stop:step]

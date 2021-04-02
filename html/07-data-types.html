@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Data Types</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <section>
+                        <h2> Data Types in Python </h2>
+                    </section>
+                    <section>
+                        <h2> Simple Data Types </h2>
+                        <ul>
+                            <li> <code>int</code> (Integer)
+                            <li> <code>float</code> (Floating point)
+                            <li> <code>str</code> (String)
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Complex Data Types </h2>
+                        <ul>
+                            <li> <code>dict</code> (Associative Array)
+                            <li> <code>list</code> (List)
+                            <li> <code>tuple</code> (Immutable List)
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2> Integers </h2>
+                        <ul>
+                            <li> Whole numbers (no decimal point)
+                            <li> <code>0</code>, <code>25</code>,
+                            <code>-300</code>, and <code>1000000</code> are all
+                            integers
+                            <li> Don't mix nicely with strings
+                            <li> Do mix nicely with floating point numbers
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Floating Point Numbers </h2>
+                        <ul>
+                            <li> Have decimal points
+                            <li> <code>1.0</code>,
+                            <code>3.141592654</code>,
+                            <code>-17.25</code>, and
+                            <code>1000000.00001</code> are all floats
+                            <li> Don't mix nicely with strings
+                            <li> Do mix nicely with ints
+                            <li> Basic float math is inherently
+                            imprecise
+                        </ul>
+                        <p><code><pre>>>> 17.25 + 18.00003
+35.250029999999995</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <h2> Exercise 7-1</h2>
+                    <p> Perform basic math with ints and floats.
+                    <ul>
+                        <li> Assign <code>my_int</code> the value
+                        <code>2</code>
+                        <li> Assign <code>my_float</code> the value
+                        <code>7.5</code>
+                        <li> Try math operations (use <code>+</code>,
+                        <code>-</code>, <code>*</code> and
+                        <code>/</code>) using <code>my_int</code> and
+                        <code>my_float</code>
+                        <li> Run <code>type()</code> on the results
+                        <li> Do types ever change?
+                    </ul>
+                </section>
+                <section>
+                    <h2> Strings </h2>
+                    <ul>
+                        <li> A string is zero or more characters
+                        <li> The empty string, <code>""</code>, is still
+                        a string
+                        <li> Use either single quotes, <code>'</code>,
+                        or double quotes, <code>"</code>
+                        <li> Don't mix nicely with ints and floats
+                        <li> Interesting methods, like
+                        <code>.upper()</code>, <code>.lower()</code>,
+                        <code>.capitalize()</code>
+                    </ul>
+                </section>
+                <section>
+                    <h2> Exercise 7-2</h2>
+                    <ul>
+                        <li> Assign <code>my_string</code> the value
+                        <code>"hello there"</code>
+                        <li> Run the following methods on
+                        <code>my_string</code>:
+                        <ul>
+                            <li> <code>.lower()</code>
+                            <li> <code>.upper()</code>
+                            <li> <code>.capitalize()</code>
+                            <li> <code>.title()</code>
+                        </ul>
+                        <li> Try joining <code>my_string</code>
+                        to <code>", bob"</code> with the <code>+</code>
+                        operator
+                        <li> Try joining <code>my_string</code>
+                        to <code>my_int</code> with <code>+</code>
+                        <li> Try joining <code>my_string</code>
+                        to <code>my_float</code> with <code>+</code>
+                </section>
+                <section>
+                    <h2> Exercise Post-Mortem </h2>
+                    <p> What happened when you tried each of the string
+                    methods?  What happened when you joined the
+                    strings?  What happened when you joined the string
+                    with the int or float?
+                    <p> This joining is called "concatenation."
+                </section>
+                <section>
+                    <h2> Making strings and numbers play nice </h2>
+                    <p><code><pre>my_string + str(my_int)</pre></code>
+                    <p><code><pre>'{} of hearts'.format(2)</pre></code>
+                    <p><code><pre>f'{my_int} of hearts'</pre></code>
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p><a href="08-complex-data-types.html">Complex Data
+                    Types</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: For Loops</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Loops </h2>
+                    <p> Python includes two loop styles:
+                    <ul>
+                        <li> For loop
+                        <li> While loop
+                    </ul>
+                    <p> Let's dicuss what a loop is, first.
+                </section>
+                <section>
+                    <section>
+                        <h2> What is a loop? </h2>
+                        <p> In programming, a loop is a mechanism to allow a set
+                        of actions to be performed over and over, in a
+                        controllable manner.
+                    </section>
+                    <section>
+                        <p><code><pre>names = ['Bob', 'Sue', 'Jim', 'Ann']
+print(names[0])
+print(names[1])
+print(names[2])
+print(names[3])</pre></code>
+                        <p> Versus:
+                        <p><code><pre>names = ['Bob', 'Sue', 'Jim', 'Ann']
+for name in names:
+    print(name)</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h3> A Brief Diversion on Indentation in Python </h3>
+                        <p> Python uses whitespace to define blocks of code:
+                        <p><code data-line-numbers="2-3"><pre>names = ['Bob', 'Sue', 'Jim', 'Ann']
+for name in names:
+    print(name)</pre></code>
+                        <ul>
+                            <li> Line 2 defines the terms of the loop.
+                            <li> Line 3 is the indented <b>block of code</b>
+                            that is executed as a loop.
+                            <li> A colon is always* followed by an indented
+                            block of code.
+                        </ul>
+                        <p><font size="-1">* Almost always</font>
+                    </section>
+                    <section>
+                        <p> Python will recognize both tabs and spaces and
+                        whitespace.  <a
+                        href="https://www.python.org/dev/peps/pep-0008/">PEP8</a>,
+                        the Python style guide, says:
+
+                        <ul>
+                            <li> <a
+                            href="https://www.python.org/dev/peps/pep-0008/#tabs-or-spaces">Use
+                            spaces</a>
+                            <li> <a
+                            href="https://www.python.org/dev/peps/pep-0008/#indentation">4
+                            spaces is the standard indentation</a>
+                    </section>
+                </section>
+                <section>
+                    <h2> And Now, Back to Loops </h2>
+                    <p> The definition of a for loop in Python:
+                    <p><blockquote>For each item in an iterable object, run
+                    the following code once, and set the specified variable to
+                    that item.  End the loop when the iterable is exhausted.
+                    </blockquote>
+                </section>
+                <section>
+                    <h2> Exercise 11-1 </h2>
+                    <p> In a new file, create a list of the four suits of
+                    playing cards (clubs, diamonds, hearts, spades).  Write a
+                    for loop that prints out each suit.  Try changing the loop
+                    variable's name; what happens?  Try adding a second print
+                    statement inside the loop; what happens?
+
+                    <ul>
+                        <li> Use <code>[]</code> to make a list
+                        <li> For loops are:
+                    </ul>
+                    <p><code><pre>for variablename in iterable:</pre></code>
+                </section>
+                <section>
+                    <h2> Looping Over Numbers </h2>
+                    <p> Common task: loop N number of times.
+                    <p> <code>range()</code> to the rescue!
+                    <p><code><pre>for num in range(10):
+    print(num)</pre></code>
+                </section>
+                <section>
+                    <h2> Numbering Items While Looping </h2>
+                    <p> Common task: know the number of an item while looping.
+                    <p> <code>enumerate()</code> to the rescue!
+                    <p><code><pre>for num, name in enumerate(names):
+    print(f'Name number {num+1} is {name.title()}')</pre></code>
+                </section>
+                <section>
+                    <h2> List Comprehensions </h2>
+                    <p> A list can be created with a shorthand syntax called a
+                    <b>comprehension</b>.  This code creates a list of
+                    squares:
+                    <p><code><pre>squares = [num*num for num in range(10)]</pre></code>
+                    <p> Can you spot the for loop in the comprehension?
+                    <div class="fragment">
+                        <p> Equivalent for loop:
+                        <code data-line-numbers><pre>squares = []
+for num in range(10):
+    squares.append(num*num)</pre></code></p>
+                    </div>
+                </section>
+                <section>
+                    <h2> Exercise 11-2 </h2>
+                    <p> In a new file, create a list containing names, then
+                    use a list comprehension with an F-string, iterating
+                    over the output of the enumerate() function, to make a
+                    "ranked list" of names, starting at the number 1.  Print
+                    this new list using a for loop.
+                    <ul>
+                        <li> F-string: <code>f'text {expression}'</code>
+                        <li> List comprehension: <code>[item for item in
+                        interable]</code>
+                        <li> Enumerate: <code>enumerate(iterable)</code>
+                    </ul>
+                </section>
+                <section>
+                    <h2> What's Next </h2>
+                    <p> <a href="12-environment.html">Environment Review</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+Exercise 14-2
+
+Let's start using playing cards.  We'll represent a playing card using a
+tuple, with the value and the suit, like so:
+
+two_of_hearts = (2, 'hearts')
+
+For now, let't stick with the numeric values (ie, no J, Q, K or A) to keep
+the math simple.
+
+Make a new list variable, containing two of these card tuples.
+
+Make a for loop that prints out each of the cards in your "hand", and total
+up the values (points) of the cards.  Print out this value once the loop
+has finished.
+
+Remember that a variable needs to be defined before it can be added to.

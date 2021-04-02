@@ -1,0 +1,18 @@
+Exercise 7-1
+
+Start up the interactive Python interpreter.
+
+Create a new variable called "my_int", and assign the value 2 to it.
+Remember that an int doesn't have quotes around it.
+
+Create a new variable called "my_float", and assign the value 7.5 to
+it.
+
+Try using the arithmetic operators (+, -, *, /) on combinations of
+my_int and my_float.  Try to predict what type (int or float) each
+operation will produce.
+
+Try running "type()" on the results (for instance, "type(my_int +
+my_float)".
+
+Do the types of the results match what you had expected?

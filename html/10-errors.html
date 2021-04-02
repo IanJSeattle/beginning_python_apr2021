@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Errors</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Errors in Python </h2>
+                    <p> Error messages in Python are (usually) very helpful.
+                    <p> You probably recognize this message (or something like
+                    it) already:
+                    <p><pre>Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range</pre>
+                    <p> This was created by trying to access element 5 of a
+                    four-element list.
+                </section>
+                <section>
+                    <section>
+                        <h2> Dissecting the Traceback </h2>
+                        <p> Here's what that means, in detail:
+                        <p><pre>Traceback (most recent call last):</pre>
+                        <blockquote> "Hey, an error occurred.  The bottom line
+                        is the most interesting one."</blockquote>
+                    </section>
+                    <section>
+                        <p><pre> File "&lt;stdin&gt;", line 1, in &lt;module&gt;</pre>
+                        <blockquote> "We were in the file called
+                        <code>&lt;stdin&gt;</code>, on the first line, in the
+                        module called <code>&lt;module&gt;</code>."
+                        </blockquote>
+                        <p> <code>&lt;stdin&gt;</code> is a special filename
+                            you'll see when working in the interpreter directly.
+                        <p> <code>&lt;module&gt;</code> is used when there is
+                        no module name (more on modules later).
+                    </section>
+                    <section>
+                        <p><pre>IndexError: list index out of range</pre>
+
+                        <p> "This is the actual problem.  I ran into an
+                        <code>IndexError</code>, and the message that came
+                        with it was <code>'list index out of range'</code>."
+                    </section>
+                    <section>
+                        <h2> What It All Means </h2>
+                        <p> You know the location of the error
+                        (<code>&lt;stdin&gt;</code>, line 1), and you know the
+                        type of error.  You know the message that came with
+                        the error.
+
+                        <p> Look at the code indicated by the error:
+
+                        <p><code data-line-numbers="1-3"><pre>>>> my_list
+['zero', 'one', 'two', 3]
+>>> my_list[5]
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+IndexError: list index out of range</pre></code>
+
+                        <p> My list index (5) is greater than the last index
+                        in the list (3), thus my error.
+                    </section>
+                </section>
+                <section>
+                    <h2> Errors Are Your Friend </h2>
+                    <p> Please take a moment to look at the error message
+                    when you have problems.  They're usually very helpful,
+                    once you understand how they work.
+                </section>
+                <section>
+                    <h2> What's Next </h2>
+                    <p><a href="11-for-loops.html">For loops</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

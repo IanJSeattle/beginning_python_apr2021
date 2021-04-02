@@ -1,0 +1,17 @@
+Exercise 13-2
+
+Make a new list variable that contains the letter A through G.
+
+Using the equals sign, assign that list to another variable, like this:
+
+my_second_list = my_first_list
+
+Modify element 3 of the new list to be the letter Z, then print out the
+contents of both lists.
+
+Repeat these steps from the top, but instead of using simple assignment,
+use a whole-list slice, like so:
+
+my_second_list = my_first_list[:]
+
+What happens?

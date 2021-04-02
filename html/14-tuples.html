@@ -1,0 +1,113 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Tuples</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Tuples </h2>
+                    <p> A tuple (short for "multiple") is a lot like a list,
+                    with one key difference: it can't be modified.
+
+                    <p><code><pre>>>> my_list = [1, 2, 3, 4]
+>>> my_list[0] = 7
+>>> my_list
+[7, 2, 3, 4]
+>>> my_tuple = (1, 2, 3, 4)
+>>> my_tuple[0] = 7
+Traceback (most recent call last):
+  File "&lt;stdin&gt;", line 1, in &lt;module&gt;
+TypeError: 'tuple' object does not support item assignment</pre></code>
+                </section>
+                <section>
+                    <h2> Syntax </h2>
+
+                    <p> Tuples are created with parentheses:
+
+                    <p><code><pre>>>> my_tuple = (1, 2, 3, 4)</code></pre>
+
+                    <p> Tuple elements are accessed with square-bracket
+                    indexes, like lists:
+
+                    <p><code><pre>>>> my_tuple[2]
+3</pre></code>
+                </section>
+                <section data-background-image="count-von-count.png" data-background-opacity=0.3>
+                    <h2> Looping over a tuple </h2>
+
+                    <p> Just like a list, you can loop over a tuple:
+
+                    <p><code><pre>>>> my_tuple = ('two', 'three', 'four', 'five')
+>>> for item in my_tuple:
+...     item = item.title()
+...     print(f'{item}! {item} tuples, ah! ah! ah! &lt;thunder&gt;')
+...
+Two! Two tuples, ah! ah! ah! &lt;thunder&gt;
+Three! Three tuples, ah! ah! ah! &lt;thunder&gt;
+Four! Four tuples, ah! ah! ah! &lt;thunder&gt;
+Five! Five tuples, ah! ah! ah! &lt;thunder&gt;</code></pre>
+                </section>
+                <section>
+                    <h2> Exercise 14-1 </h2>
+
+                    <p> Create a list of at least four tuples.  Each tuple
+                    should represent an item and price from a grocery
+                    receipt, like <code>('beans', 1.35)</code>.
+
+                    <p> Using a for loop, print out the names of the items on
+                    the receipt, and after the loop, print the total amount
+                    spent.
+
+                    <p> List of tuples: <code>items = [(1, 2), (3, 4)]</code>
+                </section>
+                <section>
+                    <h2> Exercise 14-2 </h2>
+
+                    <p> For this, we'll work with playing card tuples:
+                    <code>two_of_hearts = (2, 'hearts')</code>  Stick to
+                    numerical values for now; no J, Q, K or A cards.
+
+                    <p> Make a new list containing two "cards."
+
+                    <p> Make a for loop that prints out each of the cards in
+                    your "hand", and add the values together.  Print this
+                    value as a number of points, after the loop.
+                </section>
+                <section>
+                    <h2> What's next </h2>
+
+                    <p> <a href="15-if-statements.html">If Statements</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

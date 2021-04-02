@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Variables</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+
+        <link rel="stylesheet" href="dist/local.css">
+
+	</head>
+	<body>
+        <!-- <style> code { color: #e7c759; } </style> -->
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> What is a variable? </h2>
+                    <ul>
+                        <li> A symbol representing something that can be
+                        changed
+                        <li> Specifically, a <b>label</b> pointing to an
+                        object
+                        <li> Not a "container" for a value
+                    </ul>
+                </section>
+                <section>
+                    <h2> A simple variable </h2>
+                    <p><code><pre>
+>>> suit = "hearts"
+>>> print(suit)
+hearts</pre></code>
+                </section>
+                <section>
+                    <section>
+                        <h2> Variable names </h2>
+                        <p> Tech specs:
+                        <ul>
+                            <li> Upper case, lower case, underbar, numbers
+                            <li> Case sensitive
+                            <li> Leading numbers not allowed
+                            <li> Spaces not allowed
+                            <li> Length unlimited
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Style considerations </h2>
+                        <p> Keep the following in mind:
+                        <ul>
+                            <li> <code>snake_case</code> preferred over
+                            <code>camelCase</code>
+                            <li> Stick with lower-case letters for now
+                            <li> Be descriptive
+                            <li> Don't be verbose
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Examples </h2>
+                        <p> Say we want a variable to hold a playing
+                        card.
+                        <ul>
+                            <li> Wrong capitalization:
+                            <code>Card</code>
+                            <li> Too terse: <code>c</code>
+                            <li> Too verbose:
+                            <code>current_playing_card</code>
+                            <li> Not snake_case:
+                            <code>PlayingCard</code>
+                            <li> Just right: <code>card</code>
+                        </ul>
+                    </section>
+                </section>
+                <section>
+                    <section>
+                        <h2> Objects in Python </h2>
+                        <p> Everything in Python is an "object."  A variable
+                        takes on the characteristics of the object it
+                        points to.  A variable can contain any object.
+                    </section>
+                    <section>
+                        <h2> Data Types </h2>
+                        <p> Python recognizes many data types, and more can
+                        be created.  Variables are not limited in which
+                        types they can take.  Python variables are not
+                        "typed."
+                    </section>
+                    <section>
+                        <h2> Type Checking </h2>
+                        <p> Python checks types at runtime.  There is
+                        an optional system for compile-time type
+                        checking.
+                    </section>
+                </section>
+                <section>
+                    <h2> Exercise 6-1 </h2>
+                    <ul>
+                        <li> Start the interpreter
+                        <li> Create a variable called <code>card</code>,
+                        which points to the string, <code>"2 of
+                        hearts"</code>
+                        <li> Type the bare word <code>card</code> into
+                        the interpreter
+                        <li> Type <code>print(card)</code>
+                    </ul>
+                    <p> What happens?  What seems to be the difference?
+                </section>
+                <section>
+                    <h2> Exercise 6-2 </h2>
+                    <p> Using the interpreter:
+                    <ul>
+                        <li> Create <code>suit</code> pointing to
+                        <code>"hearts"</code>
+                        <li> Create <code>value</code> pointing to
+                        <code>2</code>
+                        <li> Run <code>type(suit)</code>
+                        <li> Run <code>type(value)</code>
+                    </ul>
+                    <p> What happens?  What are the differences?
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p><a href="07-data-types.html">Data types</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

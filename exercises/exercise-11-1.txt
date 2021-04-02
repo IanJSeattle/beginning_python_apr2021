@@ -1,0 +1,20 @@
+Exercise 11-1
+
+Create a new file in your editor, which will be saved in your
+"students" directory as "exercise_11_1.py".
+
+Create a new list variable, which contains the names of the four suits
+of playing cards: clubs, diamonds, hearts, and spades.
+
+Write a for loop which prints out the name of each suit.  Try changing
+the name of the loop variable; what happens?  Try adding a second
+print() statement inside the loop; what happens?
+
+** Hints:
+
+The constructor for a list is square brackets: []
+
+A for loop has the following form:
+
+for variablename in iterator:
+    code_to_perform()

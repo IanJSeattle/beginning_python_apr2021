@@ -1,0 +1,36 @@
+Exercise 9-1
+
+In your editor, create a new file, which will be saved in your
+"students" directory, called "exercise_9_1.py".
+
+Create a new list variable, containing a list of four player's names.
+These can be any four names you like.
+
+Add another name to the list, by using the .append() method on your new
+list variable.  The name to be added goes in between the parentheses of
+the .append() method.
+
+Use the print() function to produce the following output:
+
+People in my game:
+name
+name
+name
+name
+name
+
+...where the five names listed are the names from your list variable.
+
+When finished with your exercise, use git to check in and upload your
+new file.  You should do this with every exercise from here on.
+
+Use the following commands to accomplish this:
+
+git status (shows information on the current status of your repo)
+git add <filename> (add the new file to your current commit)
+git commit -m "<checkin message>" (commit staged changes to the repo)
+git push -u origin master (push changes up to Gitlab)
+    * Note that in the future, you will only have to run "git push"
+      without the "-u origin master" options.  "-u origin master" tells
+      git that you are setting the [u]pstream path for [origin] to
+      point to [master].

@@ -1,0 +1,78 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: The Interpreter</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> The Python interpreter </h2>
+                    <p> We will use the interative interpreter to
+                    demonstrate ideas in class.  Start the interpreter
+                    by typing <code><pre>python</pre></code> in your
+                    terminal.  Enter <code><pre>quit()</pre></code> to
+                    exit the interpreter.
+                </section>
+                <section>
+                    <p> Commands entered in the interpreter are
+                    executed immediately.
+
+                    <p> The interpreter does one extra thing in
+                    interactive mode: if you enter a value, it will
+                    interpret the value and print it out.
+
+                    <p> Interactive samples will show the &gt;&gt;&gt;
+                    prompt.
+                </section>
+                <section>
+                    <h2> Live demo </h2>
+                    <p> Type along with us as we enter commands.
+                </section>
+                <section>
+                    <h2> File Mode </h2>
+                    <p> The way Python is usually used is to run files.
+                    Python files use the <code>.py</code> extension,
+                    like <code>hello_world.py</code>.  We'll start using this
+                    technique shortly.
+
+                    <p> To use Python in this way, type this at your
+                    computer's command prompt:
+
+                    <p><code><pre>python hello_world.py</pre></code>
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p><a href="06-variables.html">Variables</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

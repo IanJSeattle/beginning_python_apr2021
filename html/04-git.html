@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Git</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Source Code Management </h2>
+                    <p> We will be using Git throughout the class.  This
+                    enables:
+
+                    <ul>
+                        <li> Collaboration
+                        <li> Version tracking
+                        <li> Easy code sharing
+                        <li> Access to class materials
+                    </ul>
+
+                    <p> Note: Gitlab access requires VPN connection.
+                </section>
+                <section>
+                    <section>
+                        <h2> Exercise: Installing Git </h2>
+                        <ul>
+                            <li> Go to <a
+                            href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>
+                            <li> Install appropriate version
+                        </ul>
+                    </section>
+                    <section>
+                        <h2> Testing your install </h2>
+                        <p> In a terminal window:
+                        <ul>
+                            <li> <code>git help</code>
+                            <li> <code>cd [appropriate directory]</code>
+                            <li> <code>git clone git@gitlab.disney.com:python_class/beginning_python_jan2020.git</code>
+                        </ul>
+                        <p> Problems?  Are you on VPN?
+                    </section>
+                    <section>
+                        <h2> Congratulations </h2>
+                        <p> You now have Git installed, and a copy of our repo
+                        downloaded.
+                    </section>
+                </section>
+                <section>
+                    <h2> Git in 60 seconds </h2>
+                    <ul>
+                        <li> Git is local, Gitlab is the server
+                        <li> Your repo is the whole repo
+                        <li> Local changes must be affirmatively added
+                        <li> Changes updated in repo with <code>commit</code>
+                        <li> Always include a descriptive message
+                        <li> Local commits only uploaded when
+                        <code>push</code>ed
+                        <li> Remote changes only downloaded when
+                        <code>pull</code>ed or <code>fetch</code>ed
+                    </ul>
+                </section>
+                <section>
+                    <h2> Daily-Use Commands </h2>
+                    <ul>
+                        <code>
+                        <li> git status
+                        <li> git pull
+                        <li> git push
+                        <li> git add &lt;filename&gt;
+                        <li> git commit [-a] -m "&lt;message&gt;"
+                        </code>
+                    </ul>
+                </section>
+                <section>
+                    <h2> What's next </h2>
+                    <p><a href="05-interpreter.html">The Interpreter</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Lists</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Lists in Depth </h2>
+                    <ul>
+                        <li> Constructors: <code>[]</code> or
+                        <code>list()</code>
+                        <li> Contains a list of any type of object
+                        <li> Mutable
+                        <li> Random-access
+                        <li> Indexed by number
+                        <li> 0 (zero) is first element
+                    </ul>
+                    <p><code><pre>>>> my_list = ['one', 2, 'trois']
+>>> my_list[1]
+2</pre></code>
+                </section>
+                <section>
+                    <h2> What is a Constructor? </h2>
+                    <p> A constructor is a thing which "constructs" a new
+                    object for you.  You can use <code>[]</code> or
+                    <code>list()</code> to construct a list object, like so:
+
+                    <p><code><pre>my_list = [1, 'two', 3]</pre></code>
+                    <p><code><pre>my_list = list(1, 'two', 3)</pre></code>
+                    <p> These create a list object, which contains an integer,
+                    a string, and another integer, in that order.
+                </section>
+                <section>
+                    <h2> Lists Can Contain Anything </h2>
+                    <p> A list can hold numbers, strings, other lists; any
+                    object (and everything is an object) can be stored in a
+                    list.
+
+                    <p> A list which contains other lists is so common it has
+                    its own name: a <b>multi-dimensional list</b>.
+                </section>
+                <section>
+                    <h2> Lists are in Order </h2>
+                    <p> Lists preserve the order in which objects are added.
+                </section>
+                <section>
+                    <h2> Accessing List Contents </h2>
+                    <p> Use square brackets to access a particular item in a
+                    list:
+                    <p><code><pre>>>> my_list = ['maria', 'ian', 'sarah']
+>>> print(my_list[2])
+sarah</pre></code>
+                </section>
+                <section>
+                    <h2> Lists are Mutable </h2>
+                    <p> <code data-line-numbers><pre>>>> my_list = [1, 'two', 3]
+>>> my_list.append('four')
+>>> my_list
+[1, 'two', 3, 'four']
+>>> my_list.insert(0, 'zero')
+>>> my_list
+['zero', 1, 'two', 3, 'four']
+>>> del my_list[4]
+>>> my_list
+['zero', 1, 'two', 3]
+>>> my_list[1] = 'one'
+>>> my_list
+['zero', 'one', 'two', 3]</pre></code>
+                </section>
+                <section>
+                    <h3> Exercise 9-1 </h3>
+                    <ul>
+                        <li> Open a new file called
+                        <code>exercise_9_1.py</code>
+                        <li> Create a new list containing 4 player names
+                        <li> Use the <code>.append()</code> method on the list
+                        to add another player at the end
+                        <li> Use the <code>print()</code> function to print
+                        the following:
+                    </ul>
+                    <p><pre>People in my game:
+name
+name
+name
+name
+name</pre>
+                    ...where each <code>name</code> is from your list, in
+                    order.  Check results into git (see detailed exercise
+                    notes).
+                </section>
+                <section>
+                    <h2> What's Next </h2>
+                    <p><a href="10-errors.html">Errors</a>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
