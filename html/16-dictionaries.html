@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Dictionaries </title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Dictionaries </h2>
+
+                    <p> A <code>dict</code> object is like a
+                    <code>list</code>, but instead of using numbers for the
+                    index, it can use any immutable value -- a string, a
+                    floating point number, a tuple, etc.
+
+                    <p><code>my_dict = {'name': 'Ian', 'role':
+                    'instructor}</code>
+                </section>
+                <section>
+                    <p> <code>dicts</code> can be instantiated with either the
+                    <code>dict()</code> keyword, or using <code>{}</code>
+                    curly brackets.
+
+                    <p> Using <code>{}</code> brackets is slightly more
+                    efficient.
+                </section>
+                <section>
+                    <section>
+                        <p> Just like a <code>list</code>, you can iterate over a
+                        <code>dict</code>:
+
+                        <p><code><pre>>>> my_dict = {'name': 'Ian', 'role': 'instructor'}
+>>> for item in my_dict:
+...   print(item)
+...
+name
+role</code></pre>
+                        <p> Note that this prints the <b>keys</b> in the
+                        <code>dict</code>, not the values.
+                    </section>
+                    <section>
+                        <p> Interesting iteration methods on
+                        <code>dicts</code>:
+
+                        <p><ul>
+                        <li> <code>.keys()</code>: return just keys (default)
+                        <li> <code>.values()</code>: return just values
+                        <li> <code>.items()</code>: return both key and value as a tuple
+                    </section>
+                    <section>
+                        <p> A very useful way to loop over <code>dicts</code>:
+
+                        <p><code><pre>>>> my_dict = {'name': 'Ian', 'role': 'instructor'}
+>>> for key, value in my_dict.items():
+...   print(f'{key}: {value}')
+...
+name: Ian
+role: instructor</code></pre>
+                    </section>
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

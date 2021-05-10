@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Beginning Python: Functions </title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Functions in Python </h2>
+
+                    <p> Functions are the way to break up code into
+                    easily-reused "sections."  Any code can go into a
+                    function, with some limitations.  Functions take data in,
+                    and return data, doing some processing in the middle.
+                </section>
+                <section>
+                    <section>
+                        <p> The most basic function:
+
+                        <p><code><pre>def say_hello():
+    print('hello')</pre></code>
+
+                        <p> This is a silly example, but shows how you could
+                        encapsulate code within a function.  To call it, you put
+                        <code>say_hello()</code> into your program.
+                    </section>
+                    <section>
+                        <p> More interesting:
+
+                        <p><code><pre>>>> def say_this(saying):
+...   print(saying)
+...
+>>> say_this('hello')
+hello
+>>> say_this('and goodbye')
+and goodbye</pre></code>
+
+                        <p> Now, it can be used to say anything.
+                    </section>
+                    <section>
+                        <p> Yet more interesting:
+                        <p><code><pre>>>> def say_multiple(saying, times):
+...   for i in range(times):
+...     print(saying)
+...
+>>> say_multiple('hey there', 3)
+hey there
+hey there
+hey there</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <h2> Arguments and Parameters </h2>
+
+                    <p> A <b>parameter</b> is the variable listed in the
+                    function definition (like <code>saying</code> in the
+                    previous example).
+
+                    <p> An <b>argument</b> is the data that's passed to that
+                    parameter (like <code>'hey there'</code> in the previous
+                    example).
+                </section>
+                <section>
+                    <h2> Return Values </h2>
+
+                    <p> Using the <code>return</code> keyword, you can return
+                    information from your function.  Consider a simple
+                    addition function:
+
+                    <p><code><pre>def add(a, b):
+    return a + b</pre></code>
+
+                    <p> This does a calculation (<code>a + b</code>), and uses
+                    <code>return</code> to send it back to the calling code:
+
+                    <p><code><pre>>>> my_value = add(3, 5)
+>>> print(my_value)
+8</pre></code>
+                </section>
+                <section>
+                    <h2> Function Names </h2>
+
+                    <p> Name functions with verbs.  They should <i>do</i>
+                    something.  Names should be easy to read:
+                    <code>verify_structure</code> is better than
+                    <code>vrfy_struct</code>.
+
+                    <p> Function names allow your code to be much easier to
+                    read, with plain names rather than obscure collections of
+                    code.
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
