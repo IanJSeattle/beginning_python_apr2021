@@ -27,6 +27,9 @@
 
                     <p><code>my_dict = {'name': 'Ian', 'role':
                     'instructor}</code>
+
+                    <p> Useful as a mini database inside a program, among
+                    other things.
                 </section>
                 <section>
                     <p> <code>dicts</code> can be instantiated with either the
@@ -69,6 +72,65 @@ role</code></pre>
 name: Ian
 role: instructor</code></pre>
                     </section>
+                </section>
+                <section>
+                    <h2> Exercise 16-1 </h2>
+
+                    <p> Create a new <code>dict</code> where the
+                    keys are the names of people, and the values
+                    are their favorite food, for five people.  Use
+                    a <code>for</code> loop to print "[name]'s
+                    favorite food is [food]".
+
+                    <p> Hint: <code>my_dict = {'key': 'value'}</code>
+                    <br> The <code>.items()</code> method will be useful
+                </section>
+                <section>
+                    <h2> Deleting Items </h2>
+
+                    <p> <code>dicts</code> (and <code>lists</code>) allow you
+                    to easily remove objects, using the <code>del</code>
+                    keyword:
+
+                    <p> <code><pre>>>> my_dict
+{'name': 'Ian', 'role': 'instructor'}
+>>> del my_dict['role']
+>>> my_dict
+{'name': 'Ian'}</pre></code>
+                </section>
+                <section>
+                    <h2> Nesting dicts </h2>
+
+                    <p> A <code>list</code> or <code>dict</code> can contain
+                    any Python object as its value, and this includes other
+                    <code>lists</code> or <code>dicts</code>. For instance,
+                    this <code>list</code> of <code>dicts</code> is a valid,
+                    and commonly used construction:
+
+                    <p><code><pre>>>> my_hand = [{'value': 2, 'suit': 'hearts'},
+...            {'value': 5, 'suit': 'spades'}]
+>>> my_hand[0]
+{'value': 2, 'suit': 'hearts'}</code></pre>
+                </section>
+                <section>
+                    <h2> Exercise 16-2 </h2>
+
+                    <p> Create a new <code>list</code> containing a series of
+                    three <code>dict</code> objects, each of which represents a
+                    card, with a 'value' key, and a 'suit' key.  Use
+                    <code>ints</code> for the values.
+
+                    <p> Then, using a <code>for</code> loop, print the value
+                    and suit of each card.  Also collect the values into a
+                    total, which is printed after the loop is finished.
+
+                    <p> Hint: to access a value in a dict, enclose the key in
+                    square brackets: <code>my_dict['some key']</code>
+                </section>
+                <section>
+                    <h2> What's next </h2>
+
+                    <p> <a href="17-functions.html">Functions</a>
                 </section>
 			</div>
 		</div>
