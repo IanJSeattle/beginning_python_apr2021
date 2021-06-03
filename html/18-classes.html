@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Classes in Python</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+		<link rel="stylesheet" href="dist/local.css">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+                    <h2> Classes in Python </h2>
+                    <p> An Introduction
+                </section>
+                <section>
+                    <section>
+                        <h2> What is a Class? </h2>
+
+                        <p> Classes are used to represent things.  A class is a
+                        data type which has data (attributes) and actions (methods)
+                        associated with it.
+
+                        <p> For instance, you might have a <code>Car</code> class,
+                        which would have a <code>fuel_level</code> attribute, and
+                        <code>accelerator()</code> and <code>brake()</code>
+                        methods.
+                    </section>
+                    <section>
+                        <h2> A Simple Class </h2>
+
+                        <p><code><pre>class Car:
+    def __init__(self):
+        self.fuel_level = 0
+        self._accelerator_position = 0
+        self._brake_position = 0
+
+    def accelerator(self, position):
+        self._accelerator_position = position
+
+    def brake(self, position):
+        self._brake_position = position</pre></code>
+                    </section>
+                </section>
+                <section>
+                    <h2> Classes Create Objects </h2>
+
+                    <p> Think of a class like a blueprint: it shows how a
+                    thing is put together, but is not the actual thing that's
+                    built.
+
+                    <p> The actual thing that's built is the <b>object</b>.
+                    In Python, you instantiate (that is, build) an object by
+                    calling a class like so:
+
+                    <p><code><pre>my_car = Car()</pre></code>
+
+                    <p> Now, <code>my_car</code> is an object, which is an
+                    instance of <code>Car</code>.
+                </section>
+                <section>
+                    <h2> Object Attributes </h2>
+
+                    <p> An <i>attribute</i> is a variable, which is attached
+                    to an object.  In our example so far,
+                    <code>fuel_level</code> is the only public variable.
+
+                    <p> Python doesn't have a concept of variable privacy, so
+                    by convention, any variable starting with an underbar
+                    (like <code>_accelerator_level</code>) is considered
+                    private.
+                </section>
+                <section>
+                    <h2> Object Methods </h2>
+
+                    <p> A <i>method</i> is a function, which is attached to an
+                    object.  The magic of object methods is they have
+                    internal access to all the variables of the object.
+
+                    <p> Imagine a <code>PlayingCard</code> object.  It would
+                    store its value (2-10, J, Q, K, A), and its suit as
+                    attributes.  You could have a <code>points()</code> method
+                    that reports its point value.
+
+                    <p> Now, calling <code>jack_of_hearts.points()</code> will
+                    return <code>10</code>, instead of <code>'J'</code>, making
+                    the math easy.
+                </section>
+                <section>
+                    <h2> Live Coding </h2>
+
+                    <p> Now, let's go make a <code>Card</code> class, and a
+                    <code>Deck</code> class to represent a deck of cards.
+                </section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>

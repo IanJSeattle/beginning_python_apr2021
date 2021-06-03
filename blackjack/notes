@@ -1,0 +1,9 @@
+Things we need to play blackjack:
+
+* a deck of cards
+* player hand
+* dealer's hand
+* total points, and point comparisons
+* randomizaton of the deck
+* input from the user: hit or stay
+* dealer intelligence: when to hit or stay
