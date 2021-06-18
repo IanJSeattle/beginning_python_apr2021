@@ -1,0 +1,25 @@
+We now have a basic Blackjack game, which allows a single player to
+receive cards, hit, stay, and see whether their cards busted, beat the
+dealer's cards, or were beat by the dealer's hand.  The dealer is
+clever enough to hit at 16 points or lower.
+
+For this exercise, please add a second player.
+
+This will involve keeping track of multiple player hands, as well as
+allowing both players to understand when it's their turn to interact
+with the program.
+
+Follow the established patterns in the main() function to add the
+second player.  For this exercise, call them "Player 1" and "Player
+2," but you could ask for real names if you have time.  Remember that
+when you find yourself writing (or copying) the same code over and
+over, it's probably a good time to turn that code into a separate
+function.
+
+For bonus points, think about how you'd modify the program to take an
+arbitrary number of players, using loops and lists.
+
+Please limit yourself to 60-90 minutes on this exercise.  I don't know
+if it's realistic to think it can be done in that amount of time, so
+don't worry if you can't finish within that time.  Do note your
+questions or frustrations for discussion in the next class!
