@@ -2,6 +2,7 @@
 
 import unittest
 import game
+import game_2
 from deck import Deck
 from card import Card
 
@@ -43,6 +44,24 @@ class TestBasicGame(unittest.TestCase):
                          Card('A', 'hearts')]
         total = game.get_hand_points(my_hand)
         self.assertEqual(total, 21)
+
+class TestPlayerInteraction(unittest.TestCase):
+
+    """
+    testing the following things:
+    * if player 1 busts, player 2 goes next
+    * player 1 interaction happens before player 2
+    * scoring at the end makes sense
+    """
+
+    def test_setup_cards(self):
+        number = 2
+        dealer, players = game_2.setup_cards(number)
+        self.assertIsInstance(dealer, Deck)
+        self.assertIsInstance(players, list)
+        self.assertIsInstance(players[0], Deck)
+
+
 
 if __name__ == '__main__':
     unittest.main()
