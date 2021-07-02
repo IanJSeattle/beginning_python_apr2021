@@ -82,56 +82,75 @@ def setup_cards(number):
     for num in range(number):
         player_hands.append(deal_cards(dealer_deck, 2))
 
-    return dealer_hand, player_hands
+    return dealer_deck, dealer_hand, player_hands
+
+def dealer_final_deal(hand, deck, points):
+    """ manage the dealer's draw after everyone else has gone """
+    show_dealer_cards(hand)
+    while points <= 16:
+        hit(deck, hand)
+        print('Dealer hits')
+        show_dealer_cards(hand)
+        points = get_hand_points(hand)
+        print(f'Dealer has {points} points')
+        if points > 16:
+            break
+    else:
+        print(f'Dealer has {points} points')
+    if points > 21:
+        print('Dealer busts!')
+    return points
 
 def main():
     number_of_players = 2
-    dealer_hand, player_hands = setup_cards(number_of_players)
+    dealer_deck, dealer_hand, player_hands = setup_cards(number_of_players)
 
     print(f'The dealer is showing a {dealer_hand[0]}')
     dealer_points = get_hand_points(dealer_hand)
+    player_points = []
 
-    player1_points = get_player_input(1, player1_hand, dealer_deck)
-
-    show_player_cards(2, player2_hand)
-    player2_points = get_hand_points(player2_hand)
-
-    while player2_points <= 21:
-        answer = input('Player 2, Would you like to Hit (h) or stay (s)? ')
-        if answer == 'h':
-            hit(dealer_deck, player2_hand)
-            player2_points = get_hand_points(player2_hand)
-            show_player_cards(2, player2_hand)
-        else:
-            break
-
-    if player2_points > 21 and player1_points > 21:
+    for i in range(number_of_players):
+        player_points.append(get_player_input(i + 1,
+                                              player_hands[i],
+                                              dealer_deck))
+    bust_count = 0
+    for score in player_points:
+        if score > 21:
+            bust_count += 1
+    if bust_count == number_of_players:
         print('BUST! The game ends.')
         return
-    elif player2_points > 21:
-        print ('Player 2 BUSTS!')
-
-        
 
     # now deal with the dealer's hand
+    dealer_points = dealer_final_deal(dealer_hand, dealer_deck, dealer_points)
 
-    while dealer_points <= 16:
-        print('Dealer hits')
-        hit(dealer_deck, dealer_hand)
-        show_dealer_cards(dealer_hand)
-        dealer_points = get_hand_points(dealer_hand)
-        
+    # at this point we know:
+    # * the players have not *all* busted out
+    # * the dealer has at least 16 points, but may have busted
+    # logic for winning:
+    # * dealer's 21 is stronger than player's 21
+    # * if all players bust, dealer doesn't check their cards
+    # * one player's 21 doesn't affect another player's 21
+    # * if dealer points == player points, it's a push, no money lost
 
-    if dealer_points > 21 and player1_points <= 21 and player2_points <= 21:
-        print('Dealer busts! Player 1 and 2 win!')
-    elif player1_points > dealer_points and player2_points > dealer_points:
-        print(f'Dealer has {dealer_points}, Player 1 has {player1_points} points, and Player 2 has {player2_points}. Player 1 and 2 win!')
-    elif player1_points > dealer_points and player2_points < dealer_points:
-        print(f'Dealer has {dealer_points}, Player 1 has {player1_points} points, and Player 2 has {player2_points}. Player 1 wins! Player 2 loses.')
-    elif player1_points < dealer_points and player2_points > dealer_points:    
-        print(f'Dealer has {dealer_points}, Player 1 has {player1_points} points, and Player 2 has {player2_points}. Player 2 wins! Player 1 loses.')
-    else:
-        print(f'Dealer has {dealer_points}, Player 1 has {player1_points} points, and Player 2 has {player2_points}. Players 1 and 2 lose.')
+    # this section would probably be better as its own standalone function
+    for i in range(number_of_players):
+        if dealer_points < 21:
+            if player_points[i] > dealer_points:
+                print(f'Player {i}: you win, with {player_points[i]} points!')
+            elif player_points[i] == 21:
+                print(f'Player {i} wins with blackjack!')
+            elif dealer_points > player_points[i]:
+                print(f'Player {i}: you lose, dealer beats you with {dealer_points} points')
+            elif dealer_points == player_points[i]:
+                print(f'Player {i} pushes, with {dealer_points}')
+        elif dealer_points == 21:
+            if player_points[i] <= 21:
+                print(f'Player {i}: you lose, dealer beats you with {dealer_points} points')
+        elif dealer_points > 21:
+            if player_points[i] <= 21:
+                print(f'Player {i}: dealer busts, and you win with {player_points[i]} points!')
+
 
 if __name__ == '__main__':
     main()
